@@ -217,7 +217,7 @@
             speakFeedback("स्वागत है! मास्टर चिट्ठी तैयार है।");
         }
 
-        function initSpeechRecognition() {
+                function initSpeechRecognition() {
             if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
                 recognition = new SpeechRecognition();
@@ -242,10 +242,18 @@
                         }
                     }
                 };
-                recognition.onerror = function() { stopListeningUI(); };
-                recognition.onend = function() { stopListeningUI(); };
+
+                recognition.onerror = function(event) {
+                    console.log("Speech error:", event.error);
+                    stopListeningUI();
+                };
+
+                recognition.onend = function() {
+                    stopListeningUI();
+                };
             }
         }
+
 
         function speakFeedback(text) {
             if ('speechSynthesis' in window) {
