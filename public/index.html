@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Chithi тАФ Smart Chaupal Edition</title>
+    <title>Master Chithi — Smart Chaupal Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
@@ -17,25 +17,25 @@
     <!-- Login Modal -->
     <div id="userEntryModal" class="fixed inset-0 bg-slate-900/85 backdrop-blur-md z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl border border-slate-100 text-center">
-            <div class="text-5xl mb-2">ЁЯзФтАНтЩВя╕ПтЬЙя╕П</div>
+            <div class="text-5xl mb-2">🧔‍♂️✉️</div>
             <h1 class="text-3xl font-black text-blue-600 tracking-wide">Master Chithi</h1>
             <p class="text-xs text-amber-600 font-extrabold uppercase tracking-widest mt-1 mb-6">Smart Chaupal Edition</p>
             
             <form onsubmit="handleUserRegistration(event)" class="space-y-4 text-left">
                 <div>
-                    <label class="text-xs font-extrabold text-slate-500 uppercase">рдкреВрд░рд╛ рдирд╛рдо (Full Name) *</label>
-                    <input type="text" id="regName" required class="w-full mt-1 p-3 border-2 border-slate-200 rounded-xl font-medium focus:border-blue-500 outline-none text-sm bg-slate-50" placeholder="рдЙрджрд╛. рд░рд╛рдо рд╕рд┐рдВрд╣ рдЪреМрдзрд░реА">
+                    <label class="text-xs font-extrabold text-slate-500 uppercase">पूरा नाम (Full Name) *</label>
+                    <input type="text" id="regName" required class="w-full mt-1 p-3 border-2 border-slate-200 rounded-xl font-medium focus:border-blue-500 outline-none text-sm bg-slate-50" placeholder="उदा. राम सिंह चौधरी">
                 </div>
                 <div>
-                    <label class="text-xs font-extrabold text-slate-500 uppercase">рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ (Mobile Number) *</label>
-                    <input type="tel" id="regPhone" required pattern="[0-9]{10}" class="w-full mt-1 p-3 border-2 border-slate-200 rounded-xl font-medium focus:border-blue-500 outline-none text-sm bg-slate-50" placeholder="10 рдЕрдВрдХреЛрдВ рдХрд╛ рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░">
+                    <label class="text-xs font-extrabold text-slate-500 uppercase">मोबाइल नंबर (Mobile Number) *</label>
+                    <input type="tel" id="regPhone" required pattern="[0-9]{10}" class="w-full mt-1 p-3 border-2 border-slate-200 rounded-xl font-medium focus:border-blue-500 outline-none text-sm bg-slate-50" placeholder="10 अंकों का मोबाइल नंबर">
                 </div>
                 <div>
-                    <label class="text-xs font-extrabold text-slate-500 uppercase">рдИрдореЗрд▓ рдЖрдИрдбреА (Email - Optional)</label>
+                    <label class="text-xs font-extrabold text-slate-500 uppercase">ईमेल आईडी (Email - Optional)</label>
                     <input type="email" id="regEmail" class="w-full mt-1 p-3 border-2 border-slate-200 rounded-xl font-medium focus:border-blue-500 outline-none text-sm bg-slate-50" placeholder="ramsingh@email.com">
                 </div>
                 <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl shadow-lg hover:bg-blue-700 transition mt-2 cursor-pointer text-base">
-                    рдЪреМрдкрд╛рд▓ рдореЗрдВ рдкреНрд░рд╡реЗрд╢ рдХрд░реЗрдВ ЁЯЪА
+                    चौपाल में प्रवेश करें 🚀
                 </button>
             </form>
         </div>
@@ -56,12 +56,12 @@
 
         <!-- Chaupal Tagline Box -->
         <div class="bg-blue-50 border border-blue-200 rounded-2xl p-2.5 mb-4 text-center">
-            <p class="text-xs font-bold text-blue-900">тАЬрд░рд╛рдо-рд░рд╛рдо! рддрд╛рдК рдЬреА рдХреА рдЪреМрдкрд╛рд▓ рд╕реЗ рдХрд╛рдЧреЫ рддреИрдпрд╛рд░ рдХрд░реЗрдВредтАЭ</p>
+            <p class="text-xs font-bold text-blue-900">“राम-राम! ताऊ जी की चौपाल से कागज़ तैयार करें।”</p>
         </div>
 
         <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3 mb-4 flex items-center justify-between">
-            <span class="text-xs font-bold text-slate-700">ЁЯЧВя╕П My Saved Documents: <b id="vaultCount">0</b></span>
-            <button onclick="toggleVaultDrawer()" class="text-xs font-extrabold text-blue-600 hover:underline">View All ЁЯУВ</button>
+            <span class="text-xs font-bold text-slate-700">🗂️ My Saved Documents: <b id="vaultCount">0</b></span>
+            <button onclick="toggleVaultDrawer()" class="text-xs font-extrabold text-blue-600 hover:underline">View All 📂</button>
         </div>
 
         <div id="vaultDrawer" class="hidden bg-slate-100 rounded-2xl p-4 mb-4 max-h-40 overflow-y-auto border border-slate-200 space-y-2">
@@ -71,52 +71,52 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
             <div>
-                <label class="text-xs font-extrabold text-slate-500 uppercase tracking-wide block mb-1">ЁЯМН Voice Language</label>
+                <label class="text-xs font-extrabold text-slate-500 uppercase tracking-wide block mb-1">🌍 Voice Language</label>
                 <select id="langSelect" onchange="updateLanguage()" class="w-full p-2.5 border-2 border-slate-200 rounded-xl font-bold text-slate-700 bg-slate-50 outline-none focus:border-blue-500 text-sm">
-                    <option value="hi-IN">ЁЯЗоЁЯЗ│ рд╣рд┐рдВрджреА (Hindi)</option>
-                    <option value="bn-IN">ЁЯЗоЁЯЗ│ ржмрж╛ржВрж▓рж╛ (Bengali)</option>
-                    <option value="mr-IN">ЁЯЗоЁЯЗ│ рдорд░рд╛рдареА (Marathi)</option>
-                    <option value="ta-IN">ЁЯЗоЁЯЗ│ родрооро┐ро┤рпН (Tamil)</option>
-                    <option value="te-IN">ЁЯЗоЁЯЗ│ р░др▒Жр░▓р▒Бр░Чр▒Б (Telugu)</option>
-                    <option value="en-IN">ЁЯЗмЁЯЗз English</option>
+                    <option value="hi-IN">🇮🇳 हिंदी (Hindi)</option>
+                    <option value="bn-IN">🇮🇳 বাংলা (Bengali)</option>
+                    <option value="mr-IN">🇮🇳 मराठी (Marathi)</option>
+                    <option value="ta-IN">🇮🇳 தமிழ் (Tamil)</option>
+                    <option value="te-IN">🇮🇳 తెలుగు (Telugu)</option>
+                    <option value="en-IN">🇬🇧 English</option>
                 </select>
             </div>
             <div>
-                <label class="text-xs font-extrabold text-slate-500 uppercase tracking-wide block mb-1">ЁЯУД Document Type (21 Suits)</label>
+                <label class="text-xs font-extrabold text-slate-500 uppercase tracking-wide block mb-1">📄 Document Type (21 Suits)</label>
                 <select id="docTypeSelect" onchange="switchDocumentType()" class="w-full p-2.5 border-2 border-slate-200 rounded-xl font-bold text-slate-700 bg-slate-50 outline-none focus:border-blue-500 text-sm">
-                    <option value="marriage">1. Marriage Biodata (рд╢рд╛рджреА рдмрд╛рдпреЛрдбрд╛рдЯрд╛)</option>
-                    <option value="bankLoan">2. Bank Loan / KCC (рдмреИрдВрдХ рд▓реЛрди)</option>
-                    <option value="pensionApp">3. Govt Pension (рд╕рд░рдХрд╛рд░реА рдкреЗрдВрд╢рди)</option>
-                    <option value="jobLeave">4. Office Leave/Job (рдЫреБрдЯреНрдЯреА рдкрддреНрд░)</option>
-                    <option value="rentAgreement">5. Rent Agreement (рдХрд┐рд░рд╛рдпрд╛рдирд╛рдорд╛)</option>
-                    <option value="schoolLeave">6. School Leave (рд╕реНрдХреВрд▓ рдЫреБрдЯреНрдЯреА)</option>
-                    <option value="policeComplaint">7. Police Complaint (рдкреБрд▓рд┐рд╕ рд╢рд┐рдХрд╛рдпрдд)</option>
-                    <option value="electricityComp">8. Electricity Complaint (рдмрд┐рдЬрд▓реА рд╢рд┐рдХрд╛рдпрдд)</option>
-                    <option value="nregaCard">9. NREGA Job Card (рдирд░реЗрдЧрд╛ рдХрд╛рд░реНрдб)</option>
-                    <option value="bankCorrection">10. Bank Passbook Correction (рдмреИрдВрдХ рд╕реБрдзрд╛рд░)</option>
-                    <option value="rationCard">11. Ration Card Update (рд░рд╛рд╢рди рдХрд╛рд░реНрдб)</option>
-                    <option value="scholarship">12. Scholarship App (рдЫрд╛рддреНрд░рд╡реГрддреНрддрд┐)</option>
-                    <option value="characterCert">13. Character Certificate (рдЪрд░рд┐рддреНрд░ рдкреНрд░рдорд╛рдг)</option>
-                    <option value="panchayatIssue">14. Panchayat Infrastructure (рдкрдВрдЪрд╛рдпрдд рд╕рдорд╕реНрдпрд╛)</option>
-                    <option value="aadhaarSim">15. Aadhaar/SIM Update (рдЖрдзрд╛рд░/рд╕рд┐рдо)</option>
-                    <option value="resignation">16. Resignation Letter (рдиреМрдХрд░реА рдЫреЛреЬрдирд╛)</option>
-                    <option value="birthCert">17. Birth Certificate (рдЬрдиреНрдо рдкреНрд░рдорд╛рдг)</option>
-                    <option value="deathCert">18. Death Certificate (рдореГрддреНрдпреБ рдкреНрд░рдорд╛рдг)</option>
-                    <option value="incomeCaste">19. Income/Caste/Domicile (рдЖрдп/рдЬрд╛рддрд┐/рдирд┐рд╡рд╛рд╕)</option>
-                    <option value="handpumpRepair">20. Handpump Repair (рд╣реИрдВрдбрдкрдВрдк рд╕реБрдзрд╛рд░)</option>
-                    <option value="medExtension">21. Medical Extension (рдЪрд┐рдХрд┐рддреНрд╕рд╛ рдЕрд╡рдХрд╛рд╢)</option>
+                    <option value="marriage">1. Marriage Biodata (शादी बायोडाटा)</option>
+                    <option value="bankLoan">2. Bank Loan / KCC (बैंक लोन)</option>
+                    <option value="pensionApp">3. Govt Pension (सरकारी पेंशन)</option>
+                    <option value="jobLeave">4. Office Leave/Job (छुट्टी पत्र)</option>
+                    <option value="rentAgreement">5. Rent Agreement (किरायानामा)</option>
+                    <option value="schoolLeave">6. School Leave (स्कूल छुट्टी)</option>
+                    <option value="policeComplaint">7. Police Complaint (पुलिस शिकायत)</option>
+                    <option value="electricityComp">8. Electricity Complaint (बिजली शिकायत)</option>
+                    <option value="nregaCard">9. NREGA Job Card (नरेगा कार्ड)</option>
+                    <option value="bankCorrection">10. Bank Passbook Correction (बैंक सुधार)</option>
+                    <option value="rationCard">11. Ration Card Update (राशन कार्ड)</option>
+                    <option value="scholarship">12. Scholarship App (छात्रवृत्ति)</option>
+                    <option value="characterCert">13. Character Certificate (चरित्र प्रमाण)</option>
+                    <option value="panchayatIssue">14. Panchayat Infrastructure (पंचायत समस्या)</option>
+                    <option value="aadhaarSim">15. Aadhaar/SIM Update (आधार/सिम)</option>
+                    <option value="resignation">16. Resignation Letter (नौकरी छोड़ना)</option>
+                    <option value="birthCert">17. Birth Certificate (जन्म प्रमाण)</option>
+                    <option value="deathCert">18. Death Certificate (मृत्यु प्रमाण)</option>
+                    <option value="incomeCaste">19. Income/Caste/Domicile (आय/जाति/निवास)</option>
+                    <option value="handpumpRepair">20. Handpump Repair (हैंडपंप सुधार)</option>
+                    <option value="medExtension">21. Medical Extension (चिकित्सा अवकाश)</option>
                 </select>
             </div>
         </div>
 
         <div class="bg-teal-50 border-2 border-teal-200 rounded-2xl p-3 mb-4 flex items-center justify-between">
             <div>
-                <b class="text-xs text-teal-900 uppercase block">ЁЯУ╖ Paper Document Scanner</b>
+                <b class="text-xs text-teal-900 uppercase block">📷 Paper Document Scanner</b>
                 <p class="text-xs text-teal-700">Scan paper to auto-fill text field.</p>
             </div>
             <input type="file" id="ocrScannerInput" accept="image/*" capture="environment" class="hidden" onchange="processPaperScanOCR(event)">
             <button onclick="document.getElementById('ocrScannerInput').click()" class="bg-teal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl shadow hover:bg-teal-700 cursor-pointer">
-                Scan ЁЯУД
+                Scan 📄
             </button>
         </div>
         <div id="ocrLoader" class="text-center text-xs text-teal-600 font-bold italic mb-3 hidden">Reading paper text...</div>
@@ -124,10 +124,10 @@
         <!-- Voice Assistant Box -->
         <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 mb-5 text-center shadow-inner">
             <p id="assistantPrompt" class="text-sm font-extrabold text-blue-900 mb-3 min-h-[40px] flex items-center justify-center">
-                рджрд╕реНрддрд╛рд╡реЗрдЬрд╝ рдмрдирд╛рдиреЗ рдХреЗ рд▓рд┐рдП рдорд╛рдЗрдХ рдмрдЯрди рджрдмрд╛рдПрдВред
+                दस्तावेज़ बनाने के लिए माइक बटन दबाएं।
             </p>
             <button id="micBtn" onclick="toggleVoiceAssistant()" class="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-blue-700 transition mx-auto cursor-pointer border-4 border-blue-200">
-                ЁЯОЩя╕П
+                🎙️
             </button>
             <p id="assistantStatus" class="text-xs text-slate-600 mt-2 font-semibold italic">Status: Ready.</p>
         </div>
@@ -135,8 +135,8 @@
         <div id="formFieldsContainer" class="space-y-3"></div>
 
         <div class="flex gap-3 mt-5">
-            <button onclick="resetForm()" class="flex-1 bg-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-300">ЁЯФД Reset</button>
-            <button onclick="generatePDFAndSave()" class="flex-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:opacity-90">ЁЯУД Save & PDF</button>
+            <button onclick="resetForm()" class="flex-1 bg-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-300">🔄 Reset</button>
+            <button onclick="generatePDFAndSave()" class="flex-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:opacity-90">📄 Save & PDF</button>
         </div>
     </div>
 
@@ -154,19 +154,263 @@
         let isListening = false;
 
         const templates = {
-            marriage: { title: "рд╢рд╛рджреА рдХрд╛ рдмрд╛рдпреЛрдбрд╛рдЯрд╛", fields: ['f1','f2','f3','f4','f5','f6'], labels: ['рдкреВрд░рд╛ рдирд╛рдо', 'рдЬрдиреНрдорддрд┐рдерд┐', 'рдкреЭрд╛рдИ', 'рд╡реНрдпрд╡рд╕рд╛рдп', 'рдкрд┐рддрд╛ рдХрд╛ рдирд╛рдо', 'рдореЛрдмрд╛рдЗрд▓'], prompts: ["рд▓реЬрдХреЗ рдпрд╛ рд▓реЬрдХреА рдХрд╛ рдкреВрд░рд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдЬрдиреНрдорддрд┐рдерд┐ рдФрд░ рд╕рдордп рдмреЛрд▓рд┐рдПред", "рдкреЭрд╛рдИ рдХрд╣рд╛рдБ рддрдХ рд╣реБрдИ рд╣реИ, рдмреЛрд▓рд┐рдПред", "рдЕрднреА рдХреНрдпрд╛ рдХрд╛рдо рдпрд╛ рдиреМрдХрд░реА рдХрд░рддреЗ рд╣реИрдВ, рдмреЛрд▓рд┐рдПред", "рдкрд┐рддрд╛ рдХрд╛ рдирд╛рдо рдФрд░ рдЙрдирдХрд╛ рдХрд╛рдо рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            bankLoan: { title: "рдмреИрдВрдХ рд▓реЛрди / рдХреЗрд╕реАрд╕реА рдЖрд╡реЗрджрди", fields: ['f1','f2','f3','f4'], labels: ['рдмреИрдВрдХ рд╢рд╛рдЦрд╛ рдирд╛рдо', 'рд▓реЛрди рдХрд╛ рдкреНрд░рдХрд╛рд░', 'рд░рд╛рд╢рд┐ / рдмреАрдШрд╛ рдЬрдореАрди', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдмреИрдВрдХ рд╢рд╛рдЦрд╛ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдХрд┐рд╕ рдкреНрд░рдХрд╛рд░ рдХрд╛ рд▓реЛрди рдЪрд╛рд╣рд┐рдП, рдмреЛрд▓рд┐рдПред", "рдХрд┐рддрдиреА рд░рд╛рд╢рд┐ рдпрд╛ рдЬрдореАрди рдХрд╛ рд╡рд┐рд╡рд░рдг рд╣реИ, рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            pensionApp: { title: "рд╕рд░рдХрд╛рд░реА рдкреЗрдВрд╢рди рдЖрд╡реЗрджрди", fields: ['f1','f2','f3','f4'], labels: ['рдкреЗрдВрд╢рди рдкреНрд░рдХрд╛рд░', 'рдЖрдзрд╛рд░ рдирдВрдмрд░', 'рдмреИрдВрдХ рдЦрд╛рддрд╛ рд╡рд┐рд╡рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдХреМрди рд╕реА рдкреЗрдВрд╢рди рдЪрд╛рд╣рд┐рдП, рдмреЛрд▓рд┐рдПред", "рдЖрдзрд╛рд░ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред", "рдмреИрдВрдХ рдЦрд╛рддрд╛ рд╡рд┐рд╡рд░рдг рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            jobLeave: { title: "рдиреМрдХрд░реА / рдЫреБрдЯреНрдЯреА рдЖрд╡реЗрджрди", fields: ['f1','f2','f3','f4'], labels: ['рдореИрдиреЗрдЬрд░/рдорд╛рд▓рд┐рдХ рдирд╛рдо', 'рдЖрд╡реЗрджрди рдХрд╛рд░рдг', 'рдЕрд╡рдзрд┐ / рддрд╛рд░реАрдЦ', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдореИрдиреЗрдЬрд░ рдпрд╛ рдорд╛рд▓рд┐рдХ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдХрд╛рд░рдг рдмреЛрд▓рд┐рдПред", "рддрд╛рд░реАрдЦ рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            rentAgreement: { title: "рдХрд┐рд░рд╛рдпрд╛рдирд╛рдорд╛ рд╢рдкрде рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рдордХрд╛рди рдорд╛рд▓рд┐рдХ рдирд╛рдо', 'рдХрд┐рд░рд╛рдпреЗрджрд╛рд░ рдирд╛рдо', 'рдорд╛рд╕рд┐рдХ рдХрд┐рд░рд╛рдпрд╛', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдордХрд╛рди рдорд╛рд▓рд┐рдХ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдХрд┐рд░рд╛рдпреЗрджрд╛рд░ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдорд╛рд╕рд┐рдХ рдХрд┐рд░рд╛рдпрд╛ рдХрд┐рддрдирд╛ рд╣реИ, рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            schoolLeave: { title: "рд╕реНрдХреВрд▓ рдЫреБрдЯреНрдЯреА рдкрддреНрд░", fields: ['f1','f2','f3','f4','f5'], labels: ['рд╕реНрдХреВрд▓ рдирд╛рдо', 'рдЫрд╛рддреНрд░ рдирд╛рдо', 'рдХрдХреНрд╖рд╛ рдФрд░ рд░реЛрд▓', 'рдЫреБрдЯреНрдЯреА рдХрд╛рд░рдг', 'рддрд╛рд░реАрдЦ'], prompts: ["рд╕реНрдХреВрд▓ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдЫрд╛рддреНрд░ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдХрдХреНрд╖рд╛ рдмреЛрд▓рд┐рдПред", "рдЫреБрдЯреНрдЯреА рдХрд╛ рдХрд╛рд░рдг рдмреЛрд▓рд┐рдПред", "рддрд╛рд░реАрдЦ рдмреЛрд▓рд┐рдПред"] },
-            policeComplaint: { title: "рдкреБрд▓рд┐рд╕ рдерд╛рдирд╛ рд╢рд┐рдХрд╛рдпрдд", fields: ['f1','f2','f3','f4'], labels: ['рдерд╛рдирд╛ рдирд╛рдо', 'рдШрдЯрдирд╛ рд╡рд┐рд╖рдп', 'рд╡рд┐рд╕реНрддреГрдд рд╡рд┐рд╡рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдерд╛рдирд╛ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рд╢рд┐рдХрд╛рдпрдд рдХрд╛ рд╡рд┐рд╖рдп рдмреЛрд▓рд┐рдПред", "рдШрдЯрдирд╛ рдХрд╛ рд╡рд┐рд╡рд░рдг рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            electricityComp: { title: "рдмрд┐рдЬрд▓реА рд╡рд┐рднрд╛рдЧ рд╢рд┐рдХрд╛рдпрдд", fields: ['f1','f2','f3','f4'], labels: ['рдЬреЗрдИ/рдПрд╕рдбреАрдУ рд╡рд┐рднрд╛рдЧ', 'рдХрдВрдЬреНрдпреВрдорд░ рдЖрдИрдбреА', 'рд╕рдорд╕реНрдпрд╛ рд╡рд┐рд╡рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рд╡рд┐рднрд╛рдЧ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдХрдВрдЬреНрдпреВрдорд░ рдЖрдИрдбреА рдмреЛрд▓рд┐рдПред", "рд╕рдорд╕реНрдпрд╛ рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            nregaCard: { title: "рдирд░реЗрдЧрд╛ рдЬреЙрдм рдХрд╛рд░реНрдб рдЖрд╡реЗрджрди", fields: ['f1','f2','f3','f4'], labels: ['рдЧреНрд░рд╛рдо рдкрдВрдЪрд╛рдпрдд рдирд╛рдо', 'рдмреНрд▓реЙрдХ рдирд╛рдо', 'рд╕рджрд╕реНрдп рд╕рдВрдЦреНрдпрд╛', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдЧреНрд░рд╛рдо рдкрдВрдЪрд╛рдпрдд рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдмреНрд▓реЙрдХ рдмреЛрд▓рд┐рдПред", "рд╕рджрд╕реНрдпреЛрдВ рдХреА рд╕рдВрдЦреНрдпрд╛ рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            bankCorrection: { title: "рдмреИрдВрдХ рдкрд╛рд╕рдмреБрдХ рд╕реБрдзрд╛рд░ рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рдмреИрдВрдХ рд╢рд╛рдЦрд╛', 'рд╕реБрдзрд╛рд░ рдХрд╛ рд╡рд┐рд╖рдп', 'рд╕рд╣реА рд╡рд┐рд╡рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдмреИрдВрдХ рд╢рд╛рдЦрд╛ рдмреЛрд▓рд┐рдПред", "рдХреНрдпрд╛ рд╕реБрдзрд╛рд░ рдХрд░рд╛рдирд╛ рд╣реИ, рдмреЛрд▓рд┐рдПред", "рд╕рд╣реА рд╡рд┐рд╡рд░рдг рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            rationCard: { title: "рд░рд╛рд╢рди рдХрд╛рд░реНрдб рд╕реБрдзрд╛рд░ рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рд░рд╛рд╢рди рдХрд╛рд░реНрдб рдирдВрдмрд░', 'рдЬреЛреЬрдирд╛ рдпрд╛ рд╣рдЯрд╛рдирд╛', 'рд╕рджрд╕реНрдп рд╡рд┐рд╡рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рд░рд╛рд╢рди рдХрд╛рд░реНрдб рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред", "рдирд╛рдо рдЬреЛреЬрдирд╛ рд╣реИ рдпрд╛ рд╣рдЯрд╛рдирд╛, рдмреЛрд▓рд┐рдПред", "рд╕рджрд╕реНрдп рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            scholarship: { title: "рдЫрд╛рддреНрд░рд╡реГрддреНрддрд┐ рдЖрд╡реЗрджрди", fields: ['f1','f2','f3','f4'], labels: ['рд╕реНрдХреВрд▓/рдХреЙрд▓реЗрдЬ рдирд╛рдо', 'рд╡рд╛рд░реНрд╖рд┐рдХ рдЖрдп', 'рд░реЛрд▓ рдирдВрдмрд░', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рд╕реНрдХреВрд▓ рдпрд╛ рдХреЙрд▓реЗрдЬ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рд╡рд╛рд░реНрд╖рд┐рдХ рдЖрдп рдмреЛрд▓рд┐рдПред", "рд░реЛрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            characterCert: { title: "рдЪрд░рд┐рддреНрд░ рдкреНрд░рдорд╛рдг рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рдХрд╛рд░реНрдпрд╛рд▓рдп/рдерд╛рдирд╛', 'рдЙрджреНрджреЗрд╢реНрдп', 'рдЖрд╡реЗрджрдХ рдирд╛рдо', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдХрд┐рд╕реЗ рдЖрд╡реЗрджрди рджреЗрдирд╛ рд╣реИ, рдмреЛрд▓рд┐рдПред", "рдХрд┐рд╕ рдХрд╛рдо рдХреЗ рд▓рд┐рдП рдЪрд╛рд╣рд┐рдП, рдмреЛрд▓рд┐рдПред", "рдЕрдкрдирд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            panchayatIssue: { title: "рдкрдВрдЪрд╛рдпрдд рд╕рдорд╕реНрдпрд╛ рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рдЧреНрд░рд╛рдо рдкреНрд░рдзрд╛рди/рдмреАрдбреАрдУ', 'рд╡рд╛рд░реНрдб/рдореЛрд╣рд▓реНрд▓рд╛', 'рд╕рдорд╕реНрдпрд╛ рд╡рд┐рд╡рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдХрд┐рд╕реЗ рджреЗрдирд╛ рд╣реИ, рдмреЛрд▓рд┐рдПред", "рд╡рд╛рд░реНрдб рдпрд╛ рдореЛрд╣рд▓реНрд▓рд╛ рдмреЛрд▓рд┐рдПред", "рд╕рдорд╕реНрдпрд╛ рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            aadhaarSim: { title: "рдЖрдзрд╛рд░/рд╕рд┐рдо рд╕реБрдзрд╛рд░ рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рдХреЗрдВрджреНрд░ рдХрд╛ рдирд╛рдо', 'рд╕реБрдзрд╛рд░ рд╡рд┐рд╡рд░рдг', 'рдЖрд╡реЗрджрдХ рдирд╛рдо', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдХреЗрдВрджреНрд░ рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдХреНрдпрд╛ рд╕реБрдзрд╛рд░ рд╣реИ, рдмреЛрд▓рд┐рдПред", "рдЕрдкрдирд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░ рдмреЛрд▓рд┐рдПред"] },
-            resignation: { title: "рдиреМрдХрд░реА рдЫреЛреЬрдиреЗ рдХрд╛ рдкрддреНрд░", fields: ['f1','f2','f3','f4'], labels: ['рдХрдВрдкрдиреА/рджреБрдХрд╛рди рдирд╛рдо', 'рдЕрдВрддрд┐рдо рддрд╛рд░реАрдЦ', 'рдХрд╛рд░рдг', 'рдореЛрдмрд╛рдЗрд▓ рдирдВрдмрд░'], prompts: ["рдХрдВрдкрдиреА рдХрд╛ рдирд╛рдо рдмреЛрд▓рд┐рдПред", "рдЕрдВрддрд┐рдо рддрд╛рд░реАрдЦ рдмреЛрд▓рд┐рдПред", "рдХрд╛рд░рдг рдмреЛрд▓рд┐рдПред", "
+            marriage: { title: "शादी का बायोडाटा", fields: ['f1','f2','f3','f4','f5','f6'], labels: ['पूरा नाम', 'जन्मतिथि', 'पढ़ाई', 'व्यवसाय', 'पिता का नाम', 'मोबाइल'], prompts: ["लड़के या लड़की का पूरा नाम बोलिए।", "जन्मतिथि और समय बोलिए।", "पढ़ाई कहाँ तक हुई है, बोलिए।", "अभी क्या काम या नौकरी करते हैं, बोलिए।", "पिता का नाम और उनका काम बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            bankLoan: { title: "बैंक लोन / केसीसी आवेदन", fields: ['f1','f2','f3','f4'], labels: ['बैंक शाखा नाम', 'लोन का प्रकार', 'राशि / बीघा जमीन', 'मोबाइल नंबर'], prompts: ["बैंक शाखा का नाम बोलिए।", "किस प्रकार का लोन चाहिए, बोलिए।", "कितनी राशि या जमीन का विवरण है, बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            pensionApp: { title: "सरकारी पेंशन आवेदन", fields: ['f1','f2','f3','f4'], labels: ['पेंशन प्रकार', 'आधार नंबर', 'बैंक खाता विवरण', 'मोबाइल नंबर'], prompts: ["कौन सी पेंशन चाहिए, बोलिए।", "आधार नंबर बोलिए।", "बैंक खाता विवरण बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            jobLeave: { title: "नौकरी / छुट्टी आवेदन", fields: ['f1','f2','f3','f4'], labels: ['मैनेजर/मालिक नाम', 'आवेदन कारण', 'अवधि / तारीख', 'मोबाइल नंबर'], prompts: ["मैनेजर या मालिक का नाम बोलिए।", "कारण बोलिए।", "तारीख बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            rentAgreement: { title: "किरायानामा शपथ पत्र", fields: ['f1','f2','f3','f4'], labels: ['मकान मालिक नाम', 'किरायेदार नाम', 'मासिक किराया', 'मोबाइल नंबर'], prompts: ["मकान मालिक का नाम बोलिए।", "किरायेदार का नाम बोलिए।", "मासिक किराया कितना है, बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            schoolLeave: { title: "स्कूल छुट्टी पत्र", fields: ['f1','f2','f3','f4','f5'], labels: ['स्कूल नाम', 'छात्र नाम', 'कक्षा और रोल', 'छुट्टी कारण', 'तारीख'], prompts: ["स्कूल का नाम बोलिए।", "छात्र का नाम बोलिए।", "कक्षा बोलिए।", "छुट्टी का कारण बोलिए।", "तारीख बोलिए।"] },
+            policeComplaint: { title: "पुलिस थाना शिकायत", fields: ['f1','f2','f3','f4'], labels: ['थाना नाम', 'घटना विषय', 'विस्तृत विवरण', 'मोबाइल नंबर'], prompts: ["थाना का नाम बोलिए।", "शिकायत का विषय बोलिए।", "घटना का विवरण बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            electricityComp: { title: "बिजली विभाग शिकायत", fields: ['f1','f2','f3','f4'], labels: ['जेई/एसडीओ विभाग', 'कंज्यूमर आईडी', 'समस्या विवरण', 'मोबाइल नंबर'], prompts: ["विभाग का नाम बोलिए।", "कंज्यूमर आईडी बोलिए।", "समस्या बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            nregaCard: { title: "नरेगा जॉब कार्ड आवेदन", fields: ['f1','f2','f3','f4'], labels: ['ग्राम पंचायत नाम', 'ब्लॉक नाम', 'सदस्य संख्या', 'मोबाइल नंबर'], prompts: ["ग्राम पंचायत का नाम बोलिए।", "ब्लॉक बोलिए।", "सदस्यों की संख्या बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            bankCorrection: { title: "बैंक पासबुक सुधार पत्र", fields: ['f1','f2','f3','f4'], labels: ['बैंक शाखा', 'सुधार का विषय', 'सही विवरण', 'मोबाइल नंबर'], prompts: ["बैंक शाखा बोलिए।", "क्या सुधार कराना है, बोलिए।", "सही विवरण बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            rationCard: { title: "राशन कार्ड सुधार पत्र", fields: ['f1','f2','f3','f4'], labels: ['राशन कार्ड नंबर', 'जोड़ना या हटाना', 'सदस्य विवरण', 'मोबाइल नंबर'], prompts: ["राशन कार्ड नंबर बोलिए।", "नाम जोड़ना है या हटाना, बोलिए।", "सदस्य का नाम बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            scholarship: { title: "छात्रवृत्ति आवेदन", fields: ['f1','f2','f3','f4'], labels: ['स्कूल/कॉलेज नाम', 'वार्षिक आय', 'रोल नंबर', 'मोबाइल नंबर'], prompts: ["स्कूल या कॉलेज का नाम बोलिए।", "वार्षिक आय बोलिए।", "रोल नंबर बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            characterCert: { title: "चरित्र प्रमाण पत्र", fields: ['f1','f2','f3','f4'], labels: ['कार्यालय/थाना', 'उद्देश्य', 'आवेदक नाम', 'मोबाइल नंबर'], prompts: ["किसे आवेदन देना है, बोलिए।", "किस काम के लिए चाहिए, बोलिए।", "अपना नाम बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            panchayatIssue: { title: "पंचायत समस्या पत्र", fields: ['f1','f2','f3','f4'], labels: ['ग्राम प्रधान/बीडीओ', 'वार्ड/मोहल्ला', 'समस्या विवरण', 'मोबाइल नंबर'], prompts: ["किसे देना है, बोलिए।", "वार्ड या मोहल्ला बोलिए।", "समस्या बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            aadhaarSim: { title: "आधार/सिम सुधार पत्र", fields: ['f1','f2','f3','f4'], labels: ['केंद्र का नाम', 'सुधार विवरण', 'आवेदक नाम', 'मोबाइल नंबर'], prompts: ["केंद्र का नाम बोलिए।", "क्या सुधार है, बोलिए।", "अपना नाम बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            resignation: { title: "नौकरी छोड़ने का पत्र", fields: ['f1','f2','f3','f4'], labels: ['कंपनी/दुकान नाम', 'अंतिम तारीख', 'कारण', 'मोबाइल नंबर'], prompts: ["कंपनी का नाम बोलिए।", "अंतिम तारीख बोलिए।", "कारण बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            birthCert: { title: "जन्म प्रमाण पत्र आवेदन", fields: ['f1','f2','f3','f4'], labels: ['अस्पताल/पंचायत', 'बच्चे का नाम', 'जन्मतिथि', 'मोबाइल नंबर'], prompts: ["स्थान का नाम बोलिए।", "बच्चे का नाम बोलिए।", "जन्मतिथि बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            deathCert: { title: "मृत्यु प्रमाण पत्र आवेदन", fields: ['f1','f2','f3','f4'], labels: ['पंचायत/नगर निगम', 'मृतक का नाम', 'देहाती तारीख', 'मोबाइल नंबर'], prompts: ["कार्यालय का नाम बोलिए।", "मृतक का नाम बोलिए।", "देहांत की तारीख बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            incomeCaste: { title: "आय/जाति/निवास आवेदन", fields: ['f1','f2','f3','f4'], labels: ['तहसील / केंद्र', 'प्रमाण पत्र प्रकार', 'उद्देश्य', 'मोबाइल नंबर'], prompts: ["तहसील का नाम बोलिए।", "कौन सा प्रमाण पत्र चाहिए, बोलिए।", "उद्देश्य बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            handpumpRepair: { title: "हैंडपंप मरम्मत आवेदन", fields: ['f1','f2','f3','f4'], labels: ['ग्राम प्रधान/जल निगम', 'हैंडपंप स्थान', 'समस्या', 'मोबाइल नंबर'], prompts: ["किसे देना है, बोलिए।", "हैंडपंप कहाँ है, बोलिए।", "क्या खराबी है, बोलिए।", "मोबाइल नंबर बोलिए।"] },
+            medExtension: { title: "चिकित्सा अवकाश पत्र", fields: ['f1','f2','f3','f4'], labels: ['कार्यालय/स्कूल', 'छुट्टी के दिन', 'डॉक्टर का नाम', 'मोबाइल नंबर'], prompts: ["कार्यालय का नाम बोलिए।", "कितने दिन छुट्टी चाहिए, बोलिए।", "डॉक्टर का नाम बोलिए।", "मोबाइल नंबर बोलिए।"] }
+        };
+
+        window.onload = function() {
+            checkUserSession();
+            initSpeechRecognition();
+            renderFormFields();
+        };
+
+        function checkUserSession() {
+            const savedUser = localStorage.getItem('MasterChithi_Active_User');
+            const savedVault = localStorage.getItem('MasterChithi_Vault_Files');
+
+            if (savedUser) {
+                currentUserProfile = JSON.parse(savedUser);
+                document.getElementById('userEntryModal').classList.add('hidden');
+                document.getElementById('welcomeUserText').innerText = `USER: ${currentUserProfile.name}`;
+            } else {
+                document.getElementById('userEntryModal').classList.remove('hidden');
+            }
+
+            if (savedVault) {
+                localVaultFolder = JSON.parse(savedVault);
+            } else {
+                localVaultFolder = [];
+            }
+            updateVaultUI();
+        }
+
+        function handleUserRegistration(event) {
+            event.preventDefault();
+            const name = document.getElementById('regName').value.trim();
+            const phone = document.getElementById('regPhone').value.trim();
+            const email = document.getElementById('regEmail').value.trim() || 'N/A';
+
+            currentUserProfile = { name, phone, email, registeredAt: new Date().toLocaleString() };
+            localStorage.setItem('MasterChithi_Active_User', JSON.stringify(currentUserProfile));
+
+            document.getElementById('userEntryModal').classList.add('hidden');
+            document.getElementById('welcomeUserText').innerText = `USER: ${name}`;
+            speakFeedback("स्वागत है! मास्टर चिट्ठी तैयार है।");
+        }
+
+        function initSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.lang = currentLang;
+                recognition.continuous = false;
+                recognition.interimResults = false;
+
+                recognition.onresult = function(event) {
+                    const spokenText = event.results[0][0].transcript;
+                    const docFields = templates[currentDocKey].fields;
+                    
+                    if (currentFieldIndex < docFields.length) {
+                        document.getElementById(docFields[currentFieldIndex]).value = spokenText;
+                        speakFeedback(`सुना: ${spokenText}`);
+                        currentFieldIndex++;
+                        if (currentFieldIndex < docFields.length) {
+                            setTimeout(askCurrentFieldPrompt, 1500);
+                        } else {
+                            document.getElementById('assistantPrompt').innerText = "सभी फील्ड भर चुके हैं! PDF डाउनलोड करें।";
+                            speakFeedback("सभी विवरण दर्ज हो चुके हैं।");
+                            stopListeningUI();
+                        }
+                    }
+                };
+                recognition.onerror = function() { stopListeningUI(); };
+                recognition.onend = function() { stopListeningUI(); };
+            }
+        }
+
+        function speakFeedback(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utter = new SpeechSynthesisUtterance(text);
+                utter.lang = currentLang;
+                window.speechSynthesis.speak(utter);
+            }
+        }
+
+        function renderFormFields() {
+            const container = document.getElementById('formFieldsContainer');
+            container.innerHTML = '';
+            const doc = templates[currentDocKey];
+            
+            doc.fields.forEach((fieldId, idx) => {
+                container.innerHTML += `
+                    <div>
+                        <label class="text-xs font-extrabold text-slate-500 uppercase tracking-wide">${idx + 1}. ${doc.labels[idx]}</label>
+                        <input type="text" id="${fieldId}" class="w-full mt-1 p-2.5 border-2 border-slate-200 rounded-xl font-medium focus:border-blue-500 outline-none bg-slate-50 text-sm" placeholder="बोलकर या टाइप करके भरें...">
+                    </div>
+                `;
+            });
+            currentFieldIndex = 0;
+            document.getElementById('assistantPrompt').innerText = doc.prompts[0];
+        }
+
+        function updateLanguage() {
+            currentLang = document.getElementById('langSelect').value;
+            initSpeechRecognition();
+            renderFormFields();
+        }
+
+        function switchDocumentType() {
+            currentDocKey = document.getElementById('docTypeSelect').value;
+            renderFormFields();
+        }
+
+        function toggleVoiceAssistant() {
+            if (!recognition) { alert("Voice recognition not supported."); return; }
+            if (isListening) {
+                recognition.stop();
+                stopListeningUI();
+            } else {
+                askCurrentFieldPrompt();
+                try {
+                    recognition.start();
+                    isListening = true;
+                    document.getElementById('micBtn').classList.add('mic-listening');
+                    document.getElementById('assistantStatus').innerText = "Status: Listening...";
+                } catch(err) {
+                    alert("Mic busy or denied.");
+                }
+            }
+        }
+
+        function askCurrentFieldPrompt() {
+            const prompts = templates[currentDocKey].prompts;
+            if (currentFieldIndex < prompts.length) {
+                const promptText = prompts[currentFieldIndex];
+                document.getElementById('assistantPrompt').innerText = promptText;
+                speakFeedback(promptText);
+            }
+        }
+
+        function stopListeningUI() {
+            isListening = false;
+            document.getElementById('micBtn').classList.remove('mic-listening');
+            document.getElementById('assistantStatus').innerText = "Status: Ready.";
+        }
+
+        async function processPaperScanOCR(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const loader = document.getElementById('ocrLoader');
+            loader.style.display = 'block';
+
+            try {
+                const worker = await Tesseract.createWorker('eng');
+                const ret = await worker.recognize(file);
+                await worker.terminate();
+
+                const extractedText = ret.data.text || '';
+                loader.style.display = 'none';
+
+                const docFields = templates[currentDocKey].fields;
+                if (currentFieldIndex < docFields.length) {
+                    document.getElementById(docFields[currentFieldIndex]).value = extractedText.trim().substring(0, 150);
+                    speakFeedback("पेपर स्कैन हो गया है।");
+                }
+            } catch (err) {
+                loader.style.display = 'none';
+                alert('Scan failed.');
+            }
+        }
+
+        function resetForm() {
+            renderFormFields();
+            stopListeningUI();
+        }
+
+        function updateVaultUI() {
+            document.getElementById('vaultCount').innerText = localVaultFolder.length;
+            const listContainer = document.getElementById('vaultListContainer');
+            if (localVaultFolder.length === 0) {
+                listContainer.innerHTML = '<p class="text-slate-400 italic">No saved documents yet.</p>';
+                return;
+            }
+            listContainer.innerHTML = '';
+            localVaultFolder.forEach((file) => {
+                listContainer.innerHTML += `
+                    <div class="flex justify-between items-center bg-white p-2 rounded-lg border">
+                        <span>📄 ${file.name} (${file.date})</span>
+                        <span class="text-emerald-600 font-bold">Saved</span>
+                    </div>
+                `;
+            });
+        }
+
+        function toggleVaultDrawer() {
+            document.getElementById('vaultDrawer').classList.toggle('hidden');
+        }
+
+        function generatePDFAndSave() {
+            if (!currentUserProfile) { alert("Please login first."); return; }
+            const doc = templates[currentDocKey];
+            let renderHtml = `
+                <div class="text-center border-b-2 border-blue-600 pb-4 mb-4">
+                    <h2 class="text-xl font-black text-blue-900 uppercase">${doc.title}</h2>
+                    <p class="text-xs text-slate-500 mt-1">Applicant: ${currentUserProfile.name} | Mobile: ${currentUserProfile.phone}</p>
+                </div>
+                <div class="space-y-3">
+            `;
+            
+            doc.fields.forEach((fieldId, idx) => {
+                const val = document.getElementById(fieldId).value || 'N/A';
+                renderHtml += `<div class="border-b pb-2"><b class="text-slate-600 text-xs uppercase">${doc.labels[idx]}:</b><p class="text-sm font-bold text-slate-900">${val}</p></div>`;
+            });
+            renderHtml += `</div><div class="mt-6 text-center text-xs text-slate-400 border-t pt-2">Generated via Master Chithi</div>`;
+
+            const outputNode = document.getElementById('pdfContentRender');
+            outputNode.innerHTML = renderHtml;
+            const templateNode = document.getElementById('pdfOutputTemplate');
+            templateNode.classList.remove('hidden');
+
+            const fileName = `${currentDocKey}_${Date.now()}.pdf`;
+
+            localVaultFolder.push({ name: `${doc.title} (${currentUserProfile.name})`, date: new Date().toLocaleDateString() });
+            localStorage.setItem('MasterChithi_Vault_Files', JSON.stringify(localVaultFolder));
+            updateVaultUI();
+
+            const opt = {
+                margin: 10,
+                filename: fileName,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().from(templateNode).save().then(() => {
+                templateNode.classList.add('hidden');
+                alert("Document successfully saved and downloaded!");
+            });
+        }
+    </script>
+</body>
+</html>
