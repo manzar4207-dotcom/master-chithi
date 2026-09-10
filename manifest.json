@@ -1,6 +1,7 @@
 {
-  "name": "Master Chithi",
-  "short_name": "Chithi",
+  "name": "Master Chithi Smart Chaupal",
+  "short_name": "MasterChithi",
+  "description": "Smart Chaupal Edition for generating documents and voice forms",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
