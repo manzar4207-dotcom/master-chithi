@@ -292,10 +292,12 @@
             renderFormFields();
         }
 
-        function toggleVoiceAssistant() {
+                function toggleVoiceAssistant() {
             if (!recognition) { alert("Voice recognition not supported."); return; }
             if (isListening) {
-                recognition.stop();
+                try {
+                    recognition.stop();
+                } catch(e) {}
                 stopListeningUI();
             } else {
                 askCurrentFieldPrompt();
@@ -305,7 +307,13 @@
                     document.getElementById('micBtn').classList.add('mic-listening');
                     document.getElementById('assistantStatus').innerText = "Status: Listening...";
                 } catch(err) {
-                    alert("Mic busy or denied.");
+                    // Agar pehle se chal raha ho toh rok kar dobara shuru karein
+                    try {
+                        recognition.abort();
+                    } catch(e) {}
+                    isListening = false;
+                    document.getElementById('micBtn').classList.remove('mic-listening');
+                    document.getElementById('assistantStatus').innerText = "Status: Ready.";
                 }
             }
         }
