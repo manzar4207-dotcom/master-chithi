@@ -2,10 +2,18 @@
   "background_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
-  "name": "master-chithi.onrender",
+  "name": "Master Chithi",
   "orientation": "any",
   "scope": "/",
-  "short_name": "master-chithi.onrender",
+  "short_name": "Master Chithi",
   "start_url": "/",
-  "theme_color": "#ffffff"
+  "theme_color": "#000000",
+  "description": "Master Chithi Application",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
